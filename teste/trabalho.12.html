@@ -1,0 +1,66 @@
+<html>
+<head>
+  <title>Calculadora de Salário</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+    }
+
+    form {
+      margin-bottom: 20px;
+    }
+
+    label {
+      display: inline-block;
+      width: 200px;
+    }
+
+    button {
+      padding: 10px 20px;
+      font-size: 16px;
+    }
+  </style>
+</head>
+<body>
+  <h1>Calculadora de Salário</h1>
+
+  <form id="salaryForm">
+    <label for="salary">Salário atual:</label>
+    <input type="number" id="salary" min="0" required>
+    
+   
+<br>
+    <button type="submit">Calcular</button>
+  </form>
+
+  <div id="result" style="display: none;">
+    <h2>Resultado</h2>
+    <p>Salário inicial: R$ <span id="initialSalary"></span></p>
+    <p>Salário com aumento: R$ <span id="increasedSalary"></span></p>
+    <p>Salário final (com desconto de impostos): R$ <span id="finalSalary"></span></p>
+  </div>
+
+  <script>
+    document.getElementById('salaryForm').addEventListener('submit', function(event) {
+      event.preventDefault();
+
+      // Obter o salário atual
+      var salary = parseFloat(document.getElementById('salary').value);
+
+      // Calcular o aumento e o salário final
+      var increasePercentage = 15;
+      var taxPercentage = 8;
+      var increaseAmount = salary * (increasePercentage / 100);
+      var increasedSalary = salary + increaseAmount;
+      var taxAmount = increasedSalary * (taxPercentage / 100);
+      var finalSalary = increasedSalary - taxAmount;
+
+      // Exibir o resultado na página
+      document.getElementById('initialSalary').textContent = salary.toFixed(2);
+      document.getElementById('increasedSalary').textContent = increasedSalary.toFixed(2);
+      document.getElementById('finalSalary').textContent = finalSalary.toFixed(2);
+      document.getElementById('result').style.display = 'block';
+    });
+  </script>
+</body>
+</html>

@@ -1,0 +1,73 @@
+<html>
+<head>
+  
+ 
+<title>Calculadora de Salário</title>
+  
+  
+<style>
+    body {
+      font-family: Arial, sans-serif;
+    }
+
+    form {
+      margin-bottom: 20px;
+    }
+
+    label {
+      display: inline-block;
+      width: 200px;
+    }
+
+    button {
+      padding: 10px 20px;
+      font-size: 16px;
+    }
+  </style>
+
+
+</head>
+<body>
+  
+ 
+<h1>Calculadora de Salário</h1>
+
+  
+
+ 
+
+
+<form id="salaryForm">
+    
+   
+<label for="salary">Salário:</label>
+    
+   
+<input type="number" id="salary" min="0" step="0.01" required>
+    <br>
+    
+   
+<button type="submit">Calcular</button>
+  </form>
+
+  
+
+ 
+
+
+<div id="result" style="display: none;">
+    <h2>Resultado</h2>
+    <p>Salário inicial: R$ <span id="initialSalary"></span></p>
+    
+    
+
+   
+<p>Salário com aumento: R$ <span id="salaryWithIncrease"></span></p>
+    
+   
+<p>Salário final (descontando impostos): R$ <span id="finalSalary"></span></p>
+  
+ 
+</div>
+
+</html>

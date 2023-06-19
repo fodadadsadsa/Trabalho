@@ -1,0 +1,79 @@
+<html>
+<head>
+  
+ 
+<title>Calculadora de Valor de Venda</title>
+  
+ 
+<style>
+   
+
+    body {
+      font-family: Arial, sans-serif;
+    }
+
+    form {
+      margin-bottom: 20px;
+    }
+
+    label {
+      display: inline-block;
+      width: 200px;
+    }
+
+    button {
+      padding: 10px 20px;
+      font-size: 16px;
+    }
+  </style>
+
+</
+</head>
+<body>
+  
+ 
+<h1>Calculadora de Valor de Venda</h1>
+
+  <form id="saleForm">
+    
+   
+<label for="smallQty">Quantidade de camisetas pequenas:</label>
+    
+    <
+
+   
+<input type="number" id="smallQty" min="0" required>
+    <br>
+    
+   
+<label for="mediumQty">Quantidade de camisetas médias:</label>
+    
+   
+<input type="number" id="mediumQty" min="0" required>
+    <br>
+    
+   
+<label for="largeQty">Quantidade de camisetas grandes:</label>
+    <input type="number" id="largeQty" min="0" required>
+    <br>
+    <button type="submit">Calcular</button>
+  </form>
+
+  
+
+ 
+
+
+<div id="result" style="display: none;">
+    
+   
+<h2>Resultado</h2>
+    
+   
+<p>O valor arrecadado é: R$ <span id="totalAmount"></span></p>
+  
+ 
+
+</body>
+
+</html>

@@ -1,0 +1,91 @@
+<html>
+<head>
+    
+   
+<meta charset="UTF-8">
+    
+    <
+
+   
+<title>Calculadora de Ferraduras</title>
+    
+   
+<style>
+       
+
+        /* CSS para estilizar a página */
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 20px;
+        }
+
+        h1 {
+            color: #333;
+        }
+
+        label {
+            display: block;
+            margin-bottom: 10px;
+        }
+
+        input[type="number"] {
+            width: 100px;
+            padding: 5px;
+        }
+
+        button {
+            padding: 10px 20px;
+            background-color: #333;
+            color: #fff;
+            border: none;
+            cursor: pointer;
+        }
+
+        #result {
+            margin-top: 20px;
+        }
+    </style>
+</head>
+<body>
+    <h1>Calculadora de Ferraduras</h1>
+
+    <label for="total-horses">Total de Cavalos:</label>
+    
+   
+<input type="number" id="total-horses" min="0">
+
+    <label for="shoes-per-horse">Ferraduras por Cavalo:</label>
+    <input type="number" id="shoes-per-horse" min="0">
+
+    <button onclick="calculateShoes()">Calcular</button>
+
+    <div id="result"></div>
+
+    
+
+   
+<script>
+        function calculateShoes() {
+            var totalHorses = parseInt(document.getElementById("total-horses").value);
+            var shoesPerHorse = parseInt(document.getElementById("shoes-per-horse").value);
+
+            if (isNaN(totalHorses) || isNaN(shoesPerHorse)) {
+                alert("Por favor, insira valores válidos para o total de
+
+        function calculateShoes() {
+            var totalHorses = parseInt(document.getElementById("total-horses").value);
+            var shoesPerHorse = parseInt(document.getElementById("shoes-per-horse").value);
+
+            if (isNaN(totalHorses) || isNaN(shoesPerHorse)) {
+                alert("Por favor, insira valores válidos para o total de cavalos e ferraduras por cavalo.");
+                return;
+            }
+
+            var totalShoes = totalHorses * shoesPerHorse;
+
+            document.getElementById("result").innerHTML = "Total de Ferraduras necessárias: " + totalShoes;
+        }
+    </script>
+</body>
+</html>

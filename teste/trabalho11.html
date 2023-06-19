@@ -1,0 +1,52 @@
+<html>
+<head>
+  
+ 
+<title>Conversor de Tempo de Trabalho</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+    }
+
+    form {
+      margin-bottom: 20px;
+    }
+
+    label {
+      display: inline-block;
+      width: 200px;
+    }
+
+    button {
+      padding: 10px 20px;
+      font-size: 16px;
+    }
+  </style>
+
+
+</head>
+<body>
+  <h1>Conversor de Tempo de Trabalho</h1>
+
+  <form id="timeForm">
+    <label for="days">Tempo de trabalho (em dias):</label>
+    <input type="number" id="days" min="0" required>
+    <br>
+    <button type="submit">Converter</button>
+  </form>
+
+  <div id="result" style="display: none;">
+    <h2>Resultado</h2>
+    <p>O tempo de trabalho equivale a:</p>
+    <ul>
+      <li><span id="years"></span> ano(s)</li>
+      <li><span id="months"></span> mês(es)</li>
+      <li><span id="remainingDays"></span> dia(s)</li>
+    </ul>
+  </div>
+
+  
+</body>
+
+
+</html>
